@@ -1,0 +1,13 @@
+{
+  "name": "next-layouts-experiments",
+  "packageManager": "yarn@3.2.2",
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "turbo": "^1.4.3"
+  },
+  "scripts": {
+    "build": "turbo run build"
+  }
+}
