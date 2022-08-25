@@ -1,17 +1,24 @@
 import * as styles from "../styles/home.css";
+import "../styles/globals.css";
 import Image from "next/future/image";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Next.js</a> with{" "}
+          <i>vanilla-extract!</i>
         </h1>
 
         <p className={styles.description}>
           Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
+        </p>
+
+        <p className={styles.description}>
+          <Link href="/test">Go to Test!</Link>
         </p>
 
         <div className={styles.grid}>
@@ -60,3 +67,11 @@ export default function Page() {
     </div>
   );
 }
+// Doesn't work in `.client.tsx` files :(
+// export async function getServerSideProps(context) {
+//   return {
+//     props: {
+//       fromGSSP: true,
+//     },
+//   };
+// }

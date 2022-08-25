@@ -32,3 +32,11 @@ globalStyle("body", {
     },
   },
 });
+
+globalStyle("i", {
+  border: "solid 2px mediumspringgreen",
+  padding: ".5rem",
+  display: "inline-flex",
+  borderRadius: "4px",
+  color: "mediumspringgreen",
+});
