@@ -1,0 +1,26 @@
+{
+  "name": "with-custom-server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "node ./server/index.js",
+    "x-start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "next": "canary",
+    "react": "experimental",
+    "react-dom": "experimental"
+  },
+  "devDependencies": {
+    "@types/node": "18.7.13",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5",
+    "typescript": "4.8.2"
+  }
+}
