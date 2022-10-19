@@ -1,0 +1,12 @@
+{
+  "name": "client-lib",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel src/ --out-dir dist/ --delete-dir-on-start --copy-files"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.19.3",
+    "@babel/core": "7.19.3",
+    "@babel/preset-env": "7.19.4"
+  }
+}

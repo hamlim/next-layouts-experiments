@@ -1,0 +1,17 @@
+{
+  "name": "mixed-lib-with-exports",
+  "scripts": {
+    "build": "babel src/ --out-dir dist/ --delete-dir-on-start --copy-files"
+  },
+  "exports": {
+    "react-server": {
+      "default": "./dist/server.js"
+    },
+    "default": "./dist/client.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.19.3",
+    "@babel/core": "7.19.3",
+    "@babel/preset-env": "7.19.4"
+  }
+}
