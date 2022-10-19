@@ -2,20 +2,21 @@ import Link from "next/link";
 
 import { foo } from "mixed-lib-with-exports";
 
-import { hello } from "client-lib";
+// ClientComponent import breaks right now:
+// TypeError: Cannot read properties of undefined (reading 'ClientComponent')
+//   at resolveModuleMetaData
+import { hello, ClientComponent } from "client-lib";
 
-import { howdy, useCustomState } from "regular-lib";
+import { howdy } from "regular-lib";
 
-import { useState } from "react";
-
-console.log({ hello, howdy, useCustomState });
+console.log({ hello, howdy, ClientComponent });
 
 export default function Index() {
-  // let [foo] = useCustomState();
   return (
     <div>
       Hello from Index!
       <strong>{foo}</strong>
+      <ClientComponent />
       <Link href="/foo">Go to Foo</Link>
       <Link href="/grouped">Go to grouped</Link>
     </div>
