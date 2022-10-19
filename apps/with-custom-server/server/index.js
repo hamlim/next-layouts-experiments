@@ -12,7 +12,7 @@ const nextApp = next({ dev: process.env.NODE_ENV === "development" });
 const handler = nextApp.getRequestHandler();
 
 nextApp.prepare().then(() => {
-  logger.info(`Next.js prepared.`);
+  console.log(`Next.js prepared.`);
 
   isReady = true;
 });
